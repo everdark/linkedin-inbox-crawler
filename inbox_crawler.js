@@ -39,7 +39,7 @@ GM_registerMenuCommand('Run Inbox Crawler', function() {
         GM_xmlhttpRequest({
             method: 'POST',
             url: local_web_service,
-            data: 'time=johndoe&first_mesg=xyz123',
+            data: `time=${time[i]}&first_mesg=${first_mesg[i]}`,
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             }
