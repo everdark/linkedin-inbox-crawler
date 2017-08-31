@@ -16,13 +16,13 @@ var local_web_service = 'http://127.0.0.1:5555/data';
 GM_registerMenuCommand('Run Inbox Crawler', function() {
     alert("Start crawling inbox!");
     var thread_href = [];
-    var first_mesg = [];
+    var last_mesg = [];
     var time = [];
     var mesglist = $('ul.msg-conversations-container__conversations-list.list-style-none.ember-view');
     mesglist.find('a').each(function(index) {
         var h = $(this).attr('href');
         time[index] = $(this).find('time.msg-conversation-listitem__time-stamp').text();
-        first_mesg[index] = $(this).find('span.msg-conversation-card__message-snippet-body').text();
+        last_mesg[index] = $(this).find('span.msg-conversation-card__message-snippet-body').text();
         thread_href[index] = h;
     });
     // for full conversation:
@@ -39,7 +39,7 @@ GM_registerMenuCommand('Run Inbox Crawler', function() {
         GM_xmlhttpRequest({
             method: 'POST',
             url: local_web_service,
-            data: `time=${time[i]}&first_mesg=${first_mesg[i]}`,
+            data: `time=${time[i]}&last_mesg=${last_mesg[i]}`,
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             }
