@@ -16,4 +16,4 @@ The idea is simply to use a userscript to crawl the message page (https://www.li
 ## Dependencies
 
 This is a Python 3 project.
-The userscript is Tested only on Chrome using Tampermonkey.
+The userscript is tested only on Chrome using Tampermonkey.
