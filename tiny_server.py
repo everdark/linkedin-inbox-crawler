@@ -22,15 +22,16 @@ def data():
         time = request.form['time']
         sender = request.form['sender']
         last_mesg = request.form['last_mesg']
-        print('Received data: {}|{}|{}'.format(time, sender, last_mesg))
+        full_mesg = request.form['full_mesg']
+        print('Received data: {}|{}|{}|(full mesg skipped)'.format(time, sender, last_mesg))
         with sqlite3.connect(_DB_NAME) as con:
             cur = con.cursor()
             cur.execute(
                 """
-                INSERT INTO inbox_data (time, sender, last_mesg) 
-                VALUES (?,?,?)
+                INSERT INTO inbox_data (time, sender, last_mesg, full_mesg) 
+                VALUES (?,?,?,?)
                 """,
-                (time, sender, last_mesg))
+                (time, sender, last_mesg, full_mesg))
             con.commit()
             msg = 'Record successfully added.'
     except:
@@ -45,7 +46,7 @@ def maybe_init_db():
     if not os.path.exists(_DB_NAME):
         conn = sqlite3.connect(_DB_NAME)
         print('Successfully connect to newly created database file.')
-        conn.execute('CREATE TABLE inbox_data (time TEXT, sender TEXT, last_mesg TEXT)')
+        conn.execute('CREATE TABLE inbox_data (time TEXT, sender TEXT, last_mesg TEXT, full_mesg TEXT)')
         print('Successfully created destined table.')
         conn.close()
 
