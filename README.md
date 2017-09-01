@@ -21,5 +21,5 @@ The userscript is tested only on Chrome using Tampermonkey.
 
 ## To Do
 
-Deal with ajax items.
-Currently we need to manually scroll the inbox menu to the extent we want to crawl.
+1. Deal with ajax items. Currently we need to manually scroll the inbox menu to the extent we want to crawl.
+2. Show data visualization directly on homepage of the web servie?
