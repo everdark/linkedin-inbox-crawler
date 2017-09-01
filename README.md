@@ -15,7 +15,8 @@ The idea is simply to use a userscript to crawl the message page (https://www.li
 
 ## Dependencies
 
-This is a Python 3 project.
+This is a Python 3 project. 
+[Flask](http://flask.pocoo.org/) is used for the micro web service.
 The userscript is tested only on Chrome using Tampermonkey.
 
 ## To Do
