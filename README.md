@@ -17,3 +17,8 @@ The idea is simply to use a userscript to crawl the message page (https://www.li
 
 This is a Python 3 project.
 The userscript is tested only on Chrome using Tampermonkey.
+
+## To Do
+
+Deal with ajax items.
+Currently we need to manually scroll the inbox menu to the extent we want to crawl.
