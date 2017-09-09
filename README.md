@@ -27,4 +27,4 @@ The userscript is tested only on Chrome using Tampermonkey.
 ## Demo Cases
 ### A calendar heatmap of your inbox mesg
 
-![alt text](https://raw.githubusercontent.com/everdark/linkedin-inbox-crawler/master/static/calendar_heatmap.png')
+![alt text](https://raw.githubusercontent.com/everdark/linkedin-inbox-crawler/master/static/calendar_heatmap.png)
