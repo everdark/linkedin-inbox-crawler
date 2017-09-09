@@ -23,3 +23,8 @@ The userscript is tested only on Chrome using Tampermonkey.
 
 1. Deal with ajax items. Currently we need to manually scroll the inbox menu to the extent we want to crawl.
 2. Show data visualization directly on homepage of the web service?
+
+## Demo Cases
+###A calendar heatmap of your inbox mesg
+
+![alt text](https://github.com/everdark/linkedin-inbox-crawler/blob/master/statia/calendar_heatmap.png')
