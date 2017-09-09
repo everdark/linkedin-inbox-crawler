@@ -25,6 +25,6 @@ The userscript is tested only on Chrome using Tampermonkey.
 2. Show data visualization directly on homepage of the web service?
 
 ## Demo Cases
-###A calendar heatmap of your inbox mesg
+### A calendar heatmap of your inbox mesg
 
-![alt text](https://raw.githubusercontent.com/everdark/linkedin-inbox-crawler/blob/master/statia/calendar_heatmap.png')
+![alt text](https://raw.githubusercontent.com/everdark/linkedin-inbox-crawler/master/static/calendar_heatmap.png')
