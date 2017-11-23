@@ -44,11 +44,18 @@ parse_time <- function(inbox_data) {
                       y=year(parsed_time),
                       wd=weekdays(parsed_time, abbreviate=TRUE) %>% 
                         factor(labels=rev(c("Mon","Tue","Wed","Thu","Fri","Sat","Sun"))))]
+    if ( nrow(inbox_data[is.na(d)]) ) {
+        message("Records that failed in timestamp parsing:")
+        print(inbox_data[is.na(d), time])
+    }
 }
 
 parse_time(inbox_data)
 
-# plot calendar heatmap
+# Ignore failed records.
+inbox_data <- inbox_data[!is.na(d)]
+
+# Plot calendar heatmap.
 dc <- inbox_data[last_mesg != "", .(.N), by="d"]
 ch_plot <- ggplot_calendar_heatmap(dc, "d", "N") +
    xlab(NULL) + 
