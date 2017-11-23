@@ -37,7 +37,7 @@ parse_time <- function(inbox_data) {
                parsed_time:=
                    paste(this_year, time) %>%
                    as.POSIXct(format="%Y %b %d")]
-    inbox_data[grepl("\\|Today$", time), 
+    inbox_data[grepl("\\|Today", time), 
                parsed_time:=Sys.time()]
     inbox_data[, `:=`(d=as.Date(parsed_time),
                       m=factor(month(parsed_time), levels=1:12, labels=month.abb),
