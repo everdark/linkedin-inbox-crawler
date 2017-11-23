@@ -23,6 +23,7 @@ The userscript is tested only on Chrome using Tampermonkey.
 
 1. Deal with ajax items. Currently we need to manually scroll the inbox menu to the extent we want to crawl.
 2. Show data visualization directly on homepage of the web service?
+3. Get the timestamp of first mesg instead of last mesg to reflect the origin of time
 
 ## Demo Cases
 ### A calendar heatmap of your inbox mesg
